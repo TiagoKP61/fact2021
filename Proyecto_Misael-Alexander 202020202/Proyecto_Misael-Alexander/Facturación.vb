@@ -68,7 +68,7 @@
         pos = Cbo_Codigo.SelectedIndex
         Select Case (pos)
             Case 0
-            Case 1 :  ()
+            'Case 1 :  ()
             Case 2 : llenarLicores()
             Case 3 : llenarDetergentes()
             Case 4 : llenarEmbutidos()
@@ -213,8 +213,8 @@
             total = total + Lbx_SubTotal.Items.Item(i)
         Next
         Lbl_Total.Text = "S/. " & total
-        Lbl_IGV.Text = "S/.0.0"
-        Lbl_BaseImponible.Text = "S/. " & total
+        'Lbl_IGV.Text = "S/.0.0"
+        'Lbl_BaseImponible.Text = "S/. " & total
 
     End Sub
 
@@ -226,8 +226,8 @@
         Lbl_Total.Text = total.ToString("c")
         baseImponible = (total / 1.18).ToString("c")
         igv = (total - baseImponible).ToString("c")
-        Lbl_BaseImponible.Text = baseImponible.ToString("c")
-        Lbl_IGV.Text = igv.ToString("c")
+        'Lbl_BaseImponible.Text = baseImponible.ToString("c")
+        'Lbl_IGV.Text = igv.ToString("c")
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Nuevo.Click
@@ -247,9 +247,9 @@
         Lbx_quant.Items.Clear()
         Lbx_SubTotal.Items.Clear()
         'Limpiando Costos
-        Lbl_BaseImponible.Text = ""
-        Lbl_IGV.Text = ""
-        Lbl_Total.Text = ""
+        'Lbl_BaseImponible.Text = ""
+        'Lbl_IGV.Text = ""
+        'Lbl_Total.Text = ""
 
     End Sub
 
